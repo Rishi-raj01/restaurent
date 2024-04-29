@@ -1,0 +1,289 @@
+/* css reset */
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+/* css variable */
+:root{
+    --navbar-height:59px;
+}
+/* navigation bar */
+#navbar{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    position: sticky;
+    top: 0px;
+    
+}
+/* navigation bar:logo and image  */
+#logo{
+    margin: 7px 18px;
+}
+#logo img{
+    height: 80px;
+    width: 87px;
+    border-radius: 50%;
+}
+/* navigation bar:list styling */
+#navbar ul{
+    display: flex;
+    opacity: 0.75;
+    
+}
+
+
+#navbar::before{
+    content: "";
+    position: absolute;
+    background-color: black;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    opacity: 0.4;
+}
+#navbar ul li{
+    display: flex;
+    list-style: none;
+    
+    font-size: 1.25rem;
+}
+#navbar ul li a{
+    /* display ko block isliye kiya bcos padding deni h  and iss me padding isliye bcos jab hver kre to ek paricular area
+    uska ho .agr ul li me krte padding to wo ek bada sa dabba ban jaata and home about us ek saath hover ho jaate */
+    display: block;
+    padding: 3px 22px;
+    margin: 5px 5px;
+    border-radius: 15px;
+    color: black;
+    text-decoration: none;
+    background-color: rgb(253, 167, 6);
+    transition:background-color 2s,transform 2s,color 2s;
+    box-shadow: 7px 5px 4px lightblue;
+}
+
+#navbar ul li a:hover{
+    color: white;
+    background-color:tomato;
+    box-shadow: 7px 5px 4px lightcoral;
+    transform: rotate(360deg);
+}
+
+/* HOME SECTION     btn */
+#home{
+    display: flex;
+    flex-direction: column;
+    padding:3px 200px;
+    height: 550px;
+    justify-content: center;
+    align-items: center;
+}
+
+#home::before{
+    content: "";
+    position: absolute;
+    background: url('https://images.pexels.com/photos/1639563/pexels-photo-1639563.jpeg?auto=compress&cs=tinysrgb&w=800')no-repeat center center/cover;
+    height: 642px;
+    top:0px;
+    left:0px;
+    width: 100%;
+    z-index: -1;
+    opacity:0.95
+    
+}
+
+.btn{
+    display: inline-block;
+    appearance: none;
+    background: #0de8e3a8;
+    color: #fff;
+    border-radius: 10px;
+    border: 2px solid red;
+    cursor: pointer;
+    position: relative;
+    padding: 6px 20px;
+    margin: 17px;
+    font-size: 1.25rem;
+    box-shadow: 0px 2px 5px rgb(255,0,130,0.5);
+    
+}
+
+#home h1{
+    color: white;
+    text-align: center;
+    /* justify-content: center; wont work bcos its a block */
+}
+
+#home p{
+    color: white;
+    text-align: center;
+    font-size: 1.5rem;
+    font-family: 'Fjalla One', sans-serif;
+    
+    
+}
+/* SERVICES SECTION */
+#services{
+    margin: 34px;
+    display: flex;
+    
+    
+}
+#services .box{
+   border: 2px solid brown;
+   margin: 0px 20px;
+   padding: 29px;
+   border-radius: 15px;
+   background-color: #e2b9b9;
+   margin-bottom: 20px;
+   box-shadow: 10px 10px 5px rgb(7, 80, 104);
+   
+   
+}
+#services .box img{
+    height: 150px;
+    display: block;
+    margin: auto;
+    /* margin auto works only when display is block */
+}
+#services-container{
+display: flex;
+width: 103%;
+justify-content: center;
+text-align: center;
+margin: -18px;
+
+}
+
+#services .box p{
+    font-family: 'Fjalla One', sans-serif;
+}
+
+#services-container::before{
+    content: "";
+ position: absolute;
+ background: url('https://images.pexels.com/photos/1132137/pexels-photo-1132137.jpeg?auto=compress&cs=tinysrgb&w=800')no-repeat center center/cover;
+ width: 100%;
+ height: 100%;
+ z-index: -1;
+ opacity: 0.89;
+}
+
+/* CLIENT SECTION */
+#client-section{
+position: relative;
+
+}
+#clients{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-content: space-between;
+    }
+
+.client-item{
+    padding: 34px;
+}
+#clients img{
+    height: 120px;
+    
+}
+#client-section::before{
+ content: "";
+ position: absolute;
+ background: url('https://wallpapers.com/images/hd/classy-butter-chicken-platter-indian-food-s8a8b9aojk6kqoz0.jpg')no-repeat center center/cover;
+ width: 100%;
+ height: 100%;
+ z-index: -1;
+ opacity: 0.89;
+}
+
+/* CONTACT SECTION */
+#contact{
+    position: relative;
+}
+#contact::before{
+    content: "";
+    position: absolute;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    background: url('https://media.designrush.com/articles/1403/conversions/_1530667899_390_yEZPsIaoTI3ZNDdB-croppedUundb-jpg-details.jpg')no-repeat center center/cover;
+    opacity: 0.7;
+}
+
+#contact-box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 34px;
+    
+}
+
+#contact-box textarea{
+    width: 100%;
+    padding: 0.4rem;
+    border-radius: 9px;
+    font-size: 1.1rem;
+
+}
+#contact-box form{
+    width: 40%;
+}
+
+#contact-box label{
+    font-size: 1.2rem;
+}
+
+footer{
+    background: black;
+    color: antiquewhite;
+    padding: 9px 20px;
+}
+
+/* utility class         h1 ko style na karke kuch utility class banayenge  */
+.h-primary{
+    font-family: 'Fjalla One', sans-serif;
+    font-size: 3.8rem;
+    padding: 12px;
+    text-align: center;
+    color: white;
+    background: linear-gradient(to right,#30CFD0 0%,#7b41c2 100%);
+    background-clip: text;
+    color:transparent
+}
+.h1-primary-1{
+    font-family: 'Fjalla One', sans-serif;
+    font-size: 3.8rem;
+    justify-content: center;
+    display: flex;
+    /* padding: 415px 4px;
+    text-align: center;
+
+    display: flex;
+    justify-content: center; */
+    
+}
+.h1-primary-2{
+    font-size: 3em;
+    color: white;
+
+    background: linear-gradient(to right,#0d3232 0%,#cb0bd9 100%);
+    background-clip: text;
+    color:transparent
+}
+
+.h-secondary{
+    font-family: 'Fjalla One', sans-serif;
+    font-size: 2.3rem;
+    padding: 12px;
+}
+
+.center{
+    text-align: center;
+}
